@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.cloud9carousel.js"></script>
+    <script src="js/reflection.js"></script>
+    <style>
+        #carousel {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carousel">
+        <img class="cloud9-item" src="./images/browsers/chrome.png" alt="Item #1">
+        <img class="cloud9-item" src="./images/browsers/wyzo.png" alt="Item #2">
+        <img class="cloud9-item" src="./images/browsers/safari.png" alt="Item #3">
+        <img class="cloud9-item" src="images/browsers/opera.png" alt="Item #4">
+        <img class="cloud9-item" src="images/browsers/iexplore.png" alt="Item #5">
+        <img class="cloud9-item" src="images/browsers/firefox.png" alt="Item #6">
+    </div>
+
+    <div id="buttons">
+        <button class="left">
+    ←
+  </button>
+        <button class="right">
+    →
+  </button>
+    </div>
+</body>
+<script>
+    $("#carousel").Cloud9Carousel({
+        yOrigin: 42,
+        yRadius: 48,
+        mirror: {
+            gap: 12,
+            height: 0.2,
+            opacity: 0.4,
+        },
+        buttonLeft: $("#buttons > .left"),
+        buttonRight: $("#buttons > .right"),
+        autoPlay: 0,
+        smooth: true,
+        bringToFront: true,
+        // handle:  $("#carousel").data("carousel").go(3),//初始化现实第三个
+    });
+   $("#carousel").data("carousel").go(3)
+    // $('#nav > button').click(function (e) {
+    //     var b = $(e.target).addClass('down')
+    //     // setTimeout(function () { b.removeClass('down') }, 80)
+    // })
+
+</script>
+
+</html>

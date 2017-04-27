@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.cloud9carousel.js"></script>
+    <script src="js/jquery.reflection.js"></script>
+    <style>
+        #myxzmu {
+            height: 200px;
+            width: 800px;
+            margin: 0px auto;
+        }
+        
+        .card {
+            height: 100px;
+            width: 50px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myxzmu">
+        <div class="card">
+            花花妹妹
+        </div>
+        <div class="card">
+            张强
+        </div>
+        <div class="card">
+            张强还在那你去哪个
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        var xzmu = $('#myxzmu');
+        xzmu.Cloud9Carousel({
+            // yOrigin: 42,他会默认父元素的高度的一半
+            // yRadius: 40,
+            itemClass: "card",//自定义子元素的一个class用来选中的
+            buttonLeft: $(".nav.left"),//可以在页面中没有但是必须要在这边定义不然会报错
+            buttonRight: $(".nav.right"),
+            bringToFront: true,//点击其他的一个元素让他回到第一个
+
+        })
+    })
+
+</script>
+
+</html>
